@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var item1 = {
+    fontSize: 9,
+    fontWeight:'lighter',
+};
+
+var item2 = {
+    fontSize: 12,
+    rotate: 'tangential'
+};
+
+var option = {
+    series: {
+        radius: ['20%', '100%'],
+        type: 'sunburst',
+        data: [{
+            name: 'A股\n\n 67.96%',
+            value: 0.6796,
+            children: [{
+                value: 0.1188,
+                name: '大盘\n\n11.88%',
+                label:item2,
+                children:[{
+                    value:0.0646 ,
+                    name: '上证50\n\n 6.46%',
+                    label:item2
+                }, {
+                    value:0.0542,
+                    name: '沪深300 \n\n 5.42%',
+                    label:item2
+                }]
+            }, {
+                value:0.1840 ,
+                name: '中小盘\n\n18.4%',
+                label:item2,
+                children:[{
+                    value:0.1552 ,
+                    name: '中证500 \n\n 15.52%',
+                    label:item2,
+                }, {
+                    value:0.0288 ,
+                    name: '创业板\n\n2.88%',
+                    label:item2
+                }]
+            }, {
+                name: '行业\n\n28.44%',
+                label:item2,
+                children: [{
+                    name: '养老\n\n7.37%',
+                    value:0.0737,
+                    label:item2,
+                    }, {
+                    value:0.0669 ,
+                    name: '医药\n\n6.69%',
+                    label:item2
+                }, {
+                    value:0.0560 ,
+                    name: '环保\n\n5.60%'
+                }, {
+                    value:0.0319 ,
+                    name: '传媒\n\n3.19%'
+                }, {
+                    value:0.0279 ,
+                    name: '证券\n2.79%'
+                }, {
+                    value:0.0204 ,
+                    name: '金融 2.04%'
+                }, {
+                    value:0.0076 ,
+                    name: '消费 0.76%',
+                    label:item1
+                }]
+            }, {
+                value:0.0924 ,
+                name: '价值\n\n9.24%',
+                label:item2,
+                children: [{
+                    name: '红利\n\n9.24%',
+                    label:item2,
+                    value:0.0924
+                    }]
+            }]
+        }, {
+            name: '货币\n\n11.50%',
+            children: [{
+                name: '货币\n\n11.50%',
+                value:0.1150,
+                children: [{
+                    name: '货币\n\n11.50%',
+
+                    value:0.1150,
+                    
+                    }]
+            }]
+        }, {
+            name: '海外新兴\n\n9.03%',
+
+            value: 0.0903,
+            children: [{
+                name: '香港\n\n7.87%',
+
+                value:0.0787,
+                children: [ {
+                    value:0.0787,
+                    name: '恒生\n\n7.87%',
+
+                    }]
+            }, {
+                value:0.0116,
+                name: '海外互联 1.16%',
+                label:item1,
+                children: [{
+                    name: '海外互联 1.16%',
+                    label:item1,
+                    value:0.0116
+                    }]
+            }]
+        }, {
+            name: '债券\n\n7.08%',
+            label:item2,
+            value: 0.0708,
+            children: [{
+                name: '国内债券\n\n6.46%',
+                value:0.0646,
+                children: [{
+                    name: '可转债\n\n3.99%',
+                    value:0.0399,
+                    label:item2
+                }, {
+                    value:0.0247,
+                    name: '纯债\n2.47%',
+                    label:item2
+                    }]
+            }, {
+                name: '海外债券',
+                label:item1,
+                children: [{
+                    name: '海外收益债 0.62%',
+                    value:0.0062,
+                    label:item1
+                    }]
+            }]
+        }, {
+            name: '商品2.55%',
+            value: 0.0255,
+            label:item1,
+            children: [{
+                name: '原油',
+                children: [{
+                name: '原油2.00%',
+                value:0.02
+                }]
+            }, {
+                name: '黄金',
+                label:item1,
+                children: [{
+                    value:0.0055,
+                    name: '黄金 0.55%',
+                    label:item1
+                    }]
+            }]
+        }, {
+            name: '海外成熟',
+            label:item1,
+            value: 0.0188,
+            children: [{
+                name: '欧洲',
+                children: [{
+                    name: '德国1.88%',
+                    value:0.0188
+                    }]
+            }]
+        }]
+    }
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
