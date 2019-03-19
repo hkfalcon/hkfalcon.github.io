@@ -20,7 +20,7 @@ var item1 = {
 };
 
 var item2 = {
-    fontSize: 17,
+    fontSize: 18,
     rotate: 'tangential'
 };
 
@@ -30,6 +30,7 @@ var option = {
         type: 'sunburst',
         data: [{
             name: 'A股\n\n 67.96%',
+            label:item2,
             value: 0.6796,
             children: [{
                 value: 0.1188,
@@ -70,16 +71,20 @@ var option = {
                     label:item2
                 }, {
                     value:0.0560 ,
-                    name: '环保\n\n5.60%'
+                    name: '环保\n\n5.60%',
+                    label:item2
                 }, {
                     value:0.0319 ,
-                    name: '传媒\n\n3.19%'
+                    name: '传媒\n\n3.19%',
+                    label:item2
                 }, {
                     value:0.0279 ,
-                    name: '证券\n2.79%'
+                    name: '证券\n2.79%',
+                    label:item2
                 }, {
                     value:0.0204 ,
-                    name: '金融 2.04%'
+                    name: '金融 2.04%',
+                    label:item2
                 }, {
                     value:0.0076 ,
                     name: '消费 0.76%',
@@ -97,11 +102,14 @@ var option = {
             }]
         }, {
             name: '货币\n\n11.50%',
+            label:item2,
             children: [{
                 name: '货币\n\n11.50%',
                 value:0.1150,
+                label:item2,
                 children: [{
                     name: '货币\n\n11.50%',
+                    label:item2,
 
                     value:0.1150,
                     
@@ -109,16 +117,16 @@ var option = {
             }]
         }, {
             name: '海外新兴\n\n9.03%',
-
+            label:item2,
             value: 0.0903,
             children: [{
                 name: '香港\n\n7.87%',
-
+                label:item2,
                 value:0.0787,
                 children: [ {
                     value:0.0787,
                     name: '恒生\n\n7.87%',
-
+                    label:item2
                     }]
             }, {
                 value:0.0116,
@@ -137,6 +145,7 @@ var option = {
             children: [{
                 name: '国内债券\n\n6.46%',
                 value:0.0646,
+                label:item2,
                 children: [{
                     name: '可转债\n\n3.99%',
                     value:0.0399,
